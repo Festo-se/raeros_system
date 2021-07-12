@@ -1,0 +1,11 @@
+<launch>
+    <arg name="servo" default="true"/>
+    <arg name="rack" default="true"/>
+    <arg name="radialgripper" default="true"/>
+    <arg name="vacmod" default="true"/>
+
+    <node pkg="rae_servo_server" name="rae_servo_server" type="rae_servo_server.py" output="screen" respawn="false" if="$(arg servo)"/>
+    <node pkg="rae_rack_server" name="rae_rack_server" type="rae_rack_server.py" output="screen" respawn="false" if="$(arg rack)"/>
+    <node pkg="rae_radgripper_server" name="rae_radgripper_server" type="rae_radgripper_server.py" output="screen" respawn="false" if="$(arg radialgripper)"/>
+    <node pkg="rae_vacmod_server" name="rae_vacmod_server" type="rae_vacmod_server.py" output="screen" respawn="true" if="$(arg vacmod)"/>
+</launch>

@@ -1,0 +1,4 @@
+<launch>
+    <include file="$(find raeros_system)/launch/system.launch"/>
+    <node pkg="raeros_system" name="example" type="example.py" output="screen" respawn="false"/>
+</launch>
