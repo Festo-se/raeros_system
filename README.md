@@ -1,10 +1,11 @@
 # About
-The __raeros_system__ package for ROS is necessary to start servo, rack and radialgripper server
+The `raeros_system` package for ROS is necessary to start servo, rack and radialgripper server.
 
 # Installation
-First install `raepy` which is an python based software interface and then install the ROS-packages which has raepy as dependency
+First install `raepy` which is an python based software interface and then install the ROS-packages which has raepy as dependency.
+
 ## Install raepy dependency
-If you want to modify the software-drive raepy, you have to build the sources in your workspace.
+If you want to modify the software-driver raepy, you have to build the sources in your workspace.
 In order to do that just clone the repository, build and install it.
 
 ```bash
@@ -46,7 +47,7 @@ catkin_make
 Each installed package includes an server which handle requests from a client. 
 These Servers should be started in the *RPI* on the Rae.
 
-Before starting you have to decide which modules shall be enabled
+Before starting you have to decide which modules shall be enabled.
 For this look inside the launch file: `/launch/system.launch` and choose the modules you need by setting the arguments to true.
 
 ```xml
