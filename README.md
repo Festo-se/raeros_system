@@ -1,5 +1,9 @@
 # About
-The `raeros_system` package for ROS is necessary to start servo, rack and radialgripper server.
+The `raeros_system` package for ROS is necessary to start servo, rack and radialgripper server. 
+It consists of:
+* [launch/system.launch](https://github.com/romzn/raeros_system/blob/master/launch/system.launch) - launches the configured module servers
+* [scripts/example.py](https://github.com/romzn/raeros_system/blob/master/scripts/example.py) - example to show basic functions
+* [launch/example.launch](https://github.com/romzn/raeros_system/blob/master/launch/example.launch) - inclued `system.launch` and starts a node with `scripts/example.py`
 
 # Installation
 First install `raepy` which is an python based software interface and then install the ROS-packages which has raepy as dependency.
