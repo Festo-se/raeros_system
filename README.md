@@ -2,8 +2,9 @@
 The __raeros_system__ package for ROS is necessary to start servo, rack and radialgripper server
 
 # Installation
+First install `raepy` which is an python based software interface and then install the ROS-packages which has raepy as dependency
 ## Install raepy dependency
-if you want to modify the software-drive raepy, you have to build the sources in your workspace.
+If you want to modify the software-drive raepy, you have to build the sources in your workspace.
 In order to do that just clone the repository, build and install it.
 
 ```bash
@@ -20,7 +21,7 @@ otherwise just install the package via pip
 pip3 install raepy
 ```
 
-## Install the ROS Package
+## Install the ROS Packages
 Install the packages from the modules you need. 
 At the moment these modules are available:
 
@@ -71,8 +72,8 @@ roslaunch raeros_system system.launch
 ```
 ## Run example
 The example executes some basic functionalites which is recommended to study.
-It is located in [scripts/example.py](https://github.com/romzn/raeros_system/blob/master/scripts/example.py)
-To start it:
+It is located in [scripts/example.py](https://github.com/romzn/raeros_system/blob/master/scripts/example.py).
+To start it execute:
 
 ```bash
 rosrun raeros_system example.py
@@ -80,3 +81,5 @@ rosrun raeros_system example.py
 
 It leads you through the calibration procedure. And shows vacuum and gripping capabilities.
 
+# Contribution
+Feel free to contribute to the project and pin your issues.
