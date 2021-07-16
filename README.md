@@ -21,7 +21,15 @@ pip3 install raepy
 ```
 
 ## Install the ROS Package
-Install the packages from the modules you need. The following commands let you install all available modules.
+Install the packages from the modules you need. 
+At the moment these modules are available:
+
+* [Vacuum-Module](https://github.com/romzn/raeros_vacmod)
+* [Radialgrippers](https://github.com/romzn/raeros_radialgripper)
+* [Linear-Rack](https://github.com/romzn/raeros_rack/tree/melodic)
+* [Servo](https://github.com/romzn/raeros_servo/tree/melodic)
+
+The following commands let you install all available modules.
 
 ```bash
 cd ~/catkin_ws/src &&
