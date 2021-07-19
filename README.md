@@ -1,14 +1,44 @@
-# About
+## About Rae
+Rae is an __OpenSource__ based modular end-of-arm tool with integrated __eye-in-hand__ depth camera which enables researchers, AI-enthusiasts and engineers to develop and deploy autonomous applications for robot manipulators. The 6 different module-types helps to solve various modern challenges in Robotics as for example bin-picking, packaging or tool-based automation. For more information about the system please visit our [homepage](#).
+
+## [Table of content](#table-of-content)
+- [Package Overview](#package-overview)
+- [Getting started](#getting-started)
+  - [Software Installation](#software-installation)
+    - [Install raepy](#install-raepy)
+    - [Install the ROS Packages](#install-the-ros-packages)
+  - [Start the servers](#start-the-servers)
+  - [Run example](#run-example)
+- [Services and Actions](#services-and-actions)
+- [Contribution](#contribution)
+
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=false
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+
+# Package Overview
+[Softwarestack,Package overview map]
+
 The `raeros_system` package for ROS is necessary to start servo, rack and radialgripper server. 
-It consists of:
+It consists of the following files:
 * [launch/system.launch](https://github.com/romzn/raeros_system/blob/master/launch/system.launch) - launches the configured module servers
 * [scripts/example.py](https://github.com/romzn/raeros_system/blob/master/scripts/example.py) - example to show basic functions
 * [launch/example.launch](https://github.com/romzn/raeros_system/blob/master/launch/example.launch) - inclued `system.launch` and starts a node with `scripts/example.py`
 
-# Installation
-First install `raepy` which is an python based software interface and then install the ROS-packages which has raepy as dependency.
+# Getting started
+> **Get the Hardware:** First of all you need the right Hardware. The [raeware repository](#raeware-repo) helps you to __buy-or-make__ your personal autonomy effector.
 
-## Install raepy dependency
+
+## Software Installation
+First install `raepy` which is an python based software interface and then install the ROS-packages.
+
+### Install raepy
+
+```bash
+pip3 install raepy
+```
 If you want to modify the software-driver raepy, you have to build the sources in your workspace.
 In order to do that just clone the repository, build and install it.
 
@@ -21,14 +51,10 @@ python3 -m pip install --upgrade build
 pip3 -m build
 pip3 install .
 ```
-otherwise just install the package via pip
-```bash
-pip3 install raepy
-```
 
-## Install the ROS Packages
-Install the packages from the modules you need. 
-At the moment these modules are available:
+
+### Install the ROS Packages
+Choose the modules depending on your hardware configuration. At the moment these modules are available:
 
 * [Vacuum-Module](https://github.com/romzn/raeros_vacmod)
 * [Radialgrippers](https://github.com/romzn/raeros_radialgripper)
@@ -47,11 +73,10 @@ cd ../../ &&
 catkin_make 
 ```
 
-## Start the Servers
+## Start the servers
 Each installed package includes an server which handle requests from a client. 
-These Servers should be started in the *RPI* on the Rae.
 
-Before starting you have to decide which modules shall be enabled.
+Before starting the servers you have to decide which modules shall be enabled.
 For this look inside the launch file: `/launch/system.launch` and choose the modules you need by setting the arguments to true.
 
 ```xml
@@ -69,7 +94,7 @@ For this look inside the launch file: `/launch/system.launch` and choose the mod
 
 ```
 
-Now connect to the Rae via `ssh romzn@rae.local` and `raeisgreat` as password.
+Now connect to the RPi on the Rae via `ssh romzn@rae.local` and `raeisgreat` as password.
 After successful login launch the system with:
 
 ```bash
@@ -86,5 +111,8 @@ rosrun raeros_system example.py
 
 It leads you through the calibration procedure. And shows vacuum and gripping capabilities.
 
+# Services and Actions
+[Overview Image]
+
 # Contribution
-Feel free to contribute to the project and pin your issues.
+Feel free to contribute to the project and pin your issues and ideas.
