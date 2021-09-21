@@ -39,10 +39,12 @@ The following commands let you install all available modules.
 
 ```bash
 cd ~/catkin_ws/src &&
-git clone -b melodic https://github.com/romzn/raeros_vacmod.git &&
-git clone -b melodic https://github.com/romzn/raeros_radialgripper.git &&
-git clone -b melodic https://github.com/romzn/raeros_rack.git &&
-git clone -b melodic https://github.com/romzn/raeros_servo.git &&
+git clone -b melodic https://github.com/festo-se/raeros_system.git &&
+git clone -b melodic https://github.com/festo-se/raeros_vacmod.git &&
+git clone -b melodic https://github.com/festo-se/raeros_radialgripper.git &&
+git clone -b melodic https://github.com/festo-se/raeros_rack.git &&
+git clone -b melodic https://github.com/festo-se/raeros_servo.git &&
+git clone -b melodic https://github.com/romzn/raeros_ledbutton.git &&
 cd ../../ &&
 catkin_make 
 ```
